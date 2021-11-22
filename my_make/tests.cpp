@@ -1,5 +1,6 @@
 #include "tests.h"
 #include <string>
+extern String str;
 bool push_back(char c, String& str){
     size_t len = str.length();
      str.push_back(c);
@@ -30,7 +31,6 @@ bool add(String& str,const String& other){
     return len + other.length() == str.length();
 }
 bool runAllTests(){
-    String str = "abacaba";
     String other = "aba";
     std:: string tmp(' ',str.length());
     std:: string other_tmp(' ',other.length());
