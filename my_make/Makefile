@@ -20,3 +20,6 @@ clean:
 	rm *o
 	rm program
 	rm tester
+
+test: tester
+	./tester  

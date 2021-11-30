@@ -8,15 +8,15 @@ bool push_back(char c, String& str){
 
 }
 bool find(const String& str,const String& other,const std::string& tmp,const std::string other_tmp){
-    size_t pos1 = str.find(other);
-    size_t pos2 = tmp.find(other_tmp);
-    return pos1 == pos2;
+    int  pos1 = str.find(other);
+    int  pos2 = tmp.find(other_tmp);
+    return (pos1 == pos2) || (pos1 == static_cast<int>(str.length()) && pos2 == -1);
 }
 
 bool rfind(const String& str,const String& other,const std::string& tmp,const std::string other_tmp){
-    size_t pos1 = str.rfind(other);
-    size_t pos2 = tmp.rfind(other_tmp);
-    return pos1 == pos2;
+    int  pos1 = str.rfind(other);
+    int  pos2 = tmp.rfind(other_tmp);
+    return (pos1 == pos2) || (pos1 == static_cast<int>(str.length()) && pos2 == -1);
 }
 bool pop_back(String& str){
       size_t len = str.length();
